@@ -16,66 +16,67 @@ architecture behavior of logic_function_tb is
         );
     end component logic_function;
 
-    signal w_A3, w_A2, w_A1, w_A0, w_S : std_logic;
+    signal w, x, y, z, s : std_logic;
 
     begin
-        and_gate_instance : logic_function
+    
+    logic_funcion_inst : logic_function
         port map (
-            A3 => w_A3,
-            A2 => w_A2,
-            A1 => w_A1,
-            A0 => w_A0,
-            S => w_S
+            A3 => w,
+            A2 => x,
+            A1 => y,
+            A0 => z,
+            S => s
         );
 
         process begin
             -- Estimulación de las entradas
-            w_A3 <= '0'; w_A2 <= '0'; w_A1 <= '0'; w_A0 <= '0';
+            w <= '0'; x <= '0'; y <= '0'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '0'; w_A1 <= '0'; w_A0 <= '1';
+            w <= '0'; x <= '0'; y <= '0'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '0'; w_A1 <= '1'; w_A0 <= '0';
+            w <= '0'; x <= '0'; y <= '1'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '0'; w_A1 <= '1'; w_A0 <= '1';
+            w <= '0'; x <= '0'; y <= '1'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '1'; w_A1 <= '0'; w_A0 <= '0';
+            w <= '0'; x <= '1'; y <= '0'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '1'; w_A1 <= '0'; w_A0 <= '1';
+            w <= '0'; x <= '1'; y <= '0'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '1'; w_A1 <= '1'; w_A0 <= '0';
+            w <= '0'; x <= '1'; y <= '1'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '0'; w_A2 <= '1'; w_A1 <= '1'; w_A0 <= '1';
+            w <= '0'; x <= '1'; y <= '1'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '0'; w_A1 <= '0'; w_A0 <= '0';
+            w <= '1'; x <= '0'; y <= '0'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '0'; w_A1 <= '0'; w_A0 <= '1';
+            w <= '1'; x <= '0'; y <= '0'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '0'; w_A1 <= '1'; w_A0 <= '0';
+            w <= '1'; x <= '0'; y <= '1'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '0'; w_A1 <= '1'; w_A0 <= '1';
+            w <= '1'; x <= '0'; y <= '1'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '1'; w_A1 <= '0'; w_A0 <= '0';
+            w <= '1'; x <= '1'; y <= '0'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '1'; w_A1 <= '0'; w_A0 <= '1';
+            w <= '1'; x <= '1'; y <= '0'; z <= '1';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '1'; w_A1 <= '1'; w_A0 <= '0';
+            w <= '1'; x <= '1'; y <= '1'; z <= '0';
             wait for 10 ns;
             
-            w_A3 <= '1'; w_A2 <= '1'; w_A1 <= '1'; w_A0 <= '1';
+            w <= '1'; x <= '1'; y <= '1'; z <= '1';
             wait for 10 ns;            
             
             -- Fin de la simulación
